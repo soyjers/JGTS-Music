@@ -96,7 +96,7 @@ export class JgtsAPIService {
 
 
     getCancionPorArtista(artistId: any) {
-        return this.http.get(`${this.urlApi}/find-song-album/${artistId}`)
+        return this.http.get(`${this.urlApi}/find-song-artist/${artistId}`)
     }
     // private headerCustom = HttpHeaders}
 

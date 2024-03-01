@@ -2,62 +2,27 @@
     <div class="CajaAtista d-flex">
         <img class="imgArtista ms-5" width="225px" height="225px" [src]="imgArtista">
         <div class="textoArtista d-flex flex-column">
-            <label class="txtPlaylist text-white fw-semibold">Artista</label>
-            <label class="txtNameArtista text-white fw-bold">{{cantante}}</label>
-            <label class="txtAlbumes text-white ms-2 fw-bold">Álbumes</label>
+            <h1 class="txtAlbumes text-white ms-2 fw-bold">{{cantante}}</h1>
 
         </div>
     </div>
 
 
-   
+
 </section>
-<div class="tools">
-    <div class="btnPlay">
-        <button class="btn btnRep mt-5 ms-5"><i class="fa-solid fa-play fa-xl" style="color: #000000;"></i></button>
-    </div>
 
+
+<hr role="presentation" class="LineaSeparacion">
+
+<div div class="listaCanciones">
+    <ol>
+
+        @for (cancion of cancionesData; track cancion._id) {
+            <div>{{cancion.name}}</div>
+        }
+    </ol>
+
+    <!-- <app-zoom [imagenCancion]="albumData.image"
+                [cantante]="albumData.artistId" [nombreCancion]="albumData._id">
+              </app-zoom> -->
 </div>
-
-
-
-<div class="popular">
-    <div class="textoCancionesPopulares">
-        <h1 class="txtFirst fw-bold">Popular</h1>
-    </div>
-
-    <ol class="mt-4">
-        <li>
-            <button class="btn col-8 d-flex">
-
-                <div class="col-9 d-flex mt-1">
-                    <!-- <img class="imagenCancion" [src]="" alt="" width="50px" height="50px">
-                    <div class="textoTitulo d-flex flex-column align-items-start justify-content-center ms-3">
-                        <h5 class="textCancion mt-1"></h5>
-                        <h5 class="textArtista"></h5>
-                    </div> -->
-
-
-                   
-                </div>
-                <div class="col-2">
-                    <label class="text-white fw-semibold d-flex align-items-start mt-3">3:36</label>
-                </div>
-                <div class="d-flex justify-content-start mt-3 col-2 ms-3">
-                    <label>
-                        <input type="checkbox">
-                        <svg id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <path
-                                d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
-                            </path>
-                        </svg>
-                    </label>
-                </div>
-            </button>
-        </li>   
-     </ol>
-</div>
-
-
-<hr role="presentation" class="LineaSeparacion2">

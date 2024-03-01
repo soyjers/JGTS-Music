@@ -19,13 +19,14 @@ export class ArtistasZoomComponent {
   idArtistaUrl: string | null
   imgArtista!: string
   cantante!: string
+  album!: string
 
-  artistasData : any
+  artistasData: any
   private servicioAPI = inject(JgtsAPIService)
-  cancionesData = signal<any>([])
+  cancionesData:any = []
   albumesData = signal<any>([])
-  
-  constructor(private paramsRuta: ActivatedRoute){
+
+  constructor(private paramsRuta: ActivatedRoute) {
     this.idArtistaUrl = this.paramsRuta.snapshot.paramMap.get('idArtista')
     console.log(this.idArtistaUrl);
   }
@@ -36,17 +37,21 @@ export class ArtistasZoomComponent {
 
     this.servicioAPI.getArtista(this.idArtistaUrl).subscribe({
       next: (artista: any) => {
-        this.artistasData.set(artista)
+        console.log("TCL: ArtistasZoomComponent -> ngOnInit -> artista", artista)
+        this.artistasData = artista
 
 
-        this.imgArtista = artista.image
+        this.imgArtista = "http://localhost:4001/"+artista.image
         this.cantante = artista.artistId
 
 
 
         this.servicioAPI.getCancionPorArtista(this.idArtistaUrl).subscribe({
           next: (canciones) => {
+            console.log("------------------------");
+            this.cancionesData = canciones
             console.log(canciones);
+            console.log("------------------------");
 
           },
           error: (err) => {

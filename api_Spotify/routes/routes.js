@@ -17,6 +17,7 @@ router.get('/find-song/:songId', songController.findSong);
 router.put('/update-song/:songId', songController.updateSong);
 router.delete('/delete-song/:songId', songController.deleteSong);
 router.get('/find-song-album/:idAlbum', songController.findSongsForAlbum);
+router.get('/find-song-artist/:idArtist', songController.findSongsForArtist);
 
 //? rutas artistas
 router.post('/create-artist', uploadControllerSong.array('image'), artistController.createArtist);

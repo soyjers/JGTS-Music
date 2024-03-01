@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
-import { Router,RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { JgtsAPIService } from '../service/jgts-api.service';
 import { ArtistasGrillaComponent } from '../templates/artistas-grilla/artistas-grilla.component';
 
@@ -18,19 +18,20 @@ import { ArtistasGrillaComponent } from '../templates/artistas-grilla/artistas-g
 export class ArtistasComponent {
 
 
-  constructor(private router: Router){}
+
+
+  constructor(private router: Router) { }
   artistasData = signal<any>([])
   private artistaService = inject(JgtsAPIService)
+
+  albumesData = signal<any>([])
+  private albumesService = inject(JgtsAPIService)
 
   ngOnInit() {
 
     if (sessionStorage.getItem("token") == null) {
       this.router.navigate(['/'])
     }
-
-
-
-
 
     this.artistaService.getArtistas().subscribe({
       next: (artistas) => {
@@ -42,5 +43,18 @@ export class ArtistasComponent {
         console.log(err);
       }
     })
-}
+
+    this.albumesService.getAlbumes().subscribe({
+      next: (albumes) => {
+        this.albumesData.set(albumes)
+        console.log(this.albumesData());
+
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+
+
+  }
 }

@@ -90,6 +90,15 @@ exports.findSongsForAlbum = async (req, res) => {
     }
 }
 
+exports.findSongsForArtist = async (req, res) => {
+    try {
+        let songData = await SongModel.find({artistId: req.params.idArtist})
+        res.status(200).json(songData);
+    } catch (error) {
+        res.status(500).send({ error: "Something has happened, contact the administrator" });
+    }
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------ */
 
 // buscar una cancion (GET)
