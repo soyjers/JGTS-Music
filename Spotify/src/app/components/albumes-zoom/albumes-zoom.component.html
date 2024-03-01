@@ -35,7 +35,7 @@
             <ol>
                 
                 @for (songData of cancionesData; track songData._id) {
-                    <app-zoom [imagenCancion]="songData.image" [cantante]="cantante" [nombreCancion]="songData.name"></app-zoom>
+                    <app-zoom [imagenCancion]="songData.image" [cantante]="cantante" [nombreCancion]="songData.name" [archivoAudio]="songData.file"></app-zoom>
                 }
                  </ol>
 
