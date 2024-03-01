@@ -33,15 +33,12 @@
 
         <div div class="listaCanciones">
             <ol>
-                
-                @for (songData of cancionesData; track songData._id) {
-                    <app-zoom [imagenCancion]="songData.image" [cantante]="cantante" [nombreCancion]="songData.name" [archivoAudio]="songData.file"></app-zoom>
-                }
-                 </ol>
 
-            <!-- <app-zoom [imagenCancion]="albumData.image"
-                [cantante]="albumData.artistId" [nombreCancion]="albumData._id">
-              </app-zoom> -->
+                @for (songData of cancionesData; track songData._id) {
+                <app-zoom [imagenCancion]="songData.image" [cantante]="cantante" [nombreCancion]="songData.name"
+                    [archivoAudio]="songData.file"></app-zoom>
+                }
+            </ol>
         </div>
 
 
