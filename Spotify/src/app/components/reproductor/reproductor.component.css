@@ -242,3 +242,30 @@ img {
 .slider:hover .level {
   height: calc(var(--slider-height) * 2);
 }
+
+
+
+@media (max-width: 768px) {
+
+  .iconosReproductor {
+    width: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .card__wrapper {
+    display:none;
+
+  }
+
+.slider {
+display: none;
+}
+
+
+.card__btn-play {
+transform: translateX(250px);
+height: -20px;
+}
+
+}

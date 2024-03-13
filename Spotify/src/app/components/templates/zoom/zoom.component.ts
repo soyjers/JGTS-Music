@@ -14,6 +14,7 @@ export class ZoomComponent {
   @Input() cantante!: string | number
   @Input() nombreCancion!: string
   @Input() archivoAudio!: string
+  iconPlay: string = "assets/img/reproductor/play.svg"
 
   private audio: HTMLAudioElement;
 
@@ -26,7 +27,9 @@ export class ZoomComponent {
     if (this.audio.paused || this.audio.src !== url) {
       this.audio.src = url;
       this.audio.play();
+      this.iconPlay = "assets/img/reproductor/pause.svg"
     } else {
+      this.iconPlay= "assets/img/reproductor/play.svg"
       this.audio.pause();
     }
   }

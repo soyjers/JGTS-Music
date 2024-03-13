@@ -11,7 +11,7 @@ describe('ArtistasZoomComponent', () => {
       imports: [ArtistasZoomComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(ArtistasZoomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

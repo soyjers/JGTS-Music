@@ -1,20 +1,38 @@
-import { Component, HostListener, Injector, OnInit, effect, signal, untracked } from '@angular/core';
+import { Component, HostListener, Injector, OnInit, effect, signal, untracked, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { BarralateralComponent } from './components/barralateral/barralateral.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component'
 import { ReproductorComponent } from './components/reproductor/reproductor.component'
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Conditional } from '@angular/compiler';
-import { SpotifyAPIService } from "../app/components/service/spotify-api.service";
+import { JgtsAPIService} from "../app/components/service/jgts-api.service";
+import { SpotifyAPIService } from './components/service/spotify-api.service';
+import { FormsModule, FormControl } from '@angular/forms';
+import { CancionesComponent } from './components/canciones/canciones.component';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, BarralateralComponent, NavComponent, FooterComponent, ReproductorComponent, HttpClientModule],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    BarralateralComponent,
+    NavComponent,
+    FooterComponent,
+    ReproductorComponent,
+    HttpClientModule,
+    FormsModule,
+    CancionesComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
+
+
 export class AppComponent implements OnInit {
   title = 'JGTS';
   session!: boolean
@@ -34,7 +52,7 @@ export class AppComponent implements OnInit {
   // }
 
 
-  constructor(private inject: Injector, private loginservice: SpotifyAPIService) { }
+  constructor(private inject: Injector, private loginservice: SpotifyAPIService, private jgts : JgtsAPIService,private http : HttpClient) { }
 
 
 
@@ -69,4 +87,10 @@ export class AppComponent implements OnInit {
   logout() {
     this.loginservice.logout();
   }
+
+
+
+
+
+
 }

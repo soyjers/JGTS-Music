@@ -1,5 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Observable } from 'rxjs'
 
 @Injectable({
     providedIn: 'root'
@@ -54,6 +55,7 @@ export class JgtsAPIService {
     getCancion(idCancion: string) {
         return this.http.get(`${this.urlApi}/find-song${idCancion}`)
     }
+
 
     postCancion(dataCancion: any) {
         return this.http.post(`${this.urlApi}/create-song`, dataCancion);
@@ -136,5 +138,18 @@ export class JgtsAPIService {
 
 
 
-}
+
+
+
+
+
+    // addToFavorites(userId: string, songId: string): Observable<any> {
+    //   return this.http.post<any>(`${this.urlApi}/add-to-favorites/${userId}/${songId}`, {});
+    // }
+
+
+
+
+
+  }
 

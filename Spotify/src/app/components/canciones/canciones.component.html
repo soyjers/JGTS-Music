@@ -2,7 +2,7 @@
   <div class="mt-3 mb-5 ms-5">
     <h1 class="textp fw-bold TextoPrincipal">Descubre Todas Las Canciones</h1>
   </div>
-  <div class="row row-cols-1 row-cols-md-5 g-6 ms-5">
+  <div class="row row-cols-1 row-cols-md-5 g-6 ms-5 ">
     @for (songData of cancionesData(); track songData.albumId) {
       <app-canciones-grilla [imagenCancion]="'http://localhost:4001/'+songData.image" [cancion]="songData.name"
         [cantante]="songData.artistId" [album]="songData .albumId">

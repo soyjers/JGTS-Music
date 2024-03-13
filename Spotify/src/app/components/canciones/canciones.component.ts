@@ -1,16 +1,16 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal,EventEmitter,Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router,RouterLink } from '@angular/router';
 import { JgtsAPIService } from '../service/jgts-api.service';
 import { CancionesGrillaComponent } from '../templates/canciones-grilla/canciones-grilla.component';
-
 @Component({
   selector: 'app-canciones',
   standalone: true,
   imports: [
     CommonModule,
     RouterLink,
-    CancionesGrillaComponent
+    CancionesGrillaComponent,
+
   ],
   templateUrl: './canciones.component.html',
   styleUrl: './canciones.component.css'
@@ -30,7 +30,7 @@ export class CancionesComponent {
       next: (canciones) => {
         this.cancionesData.set(canciones)
         console.log(this.cancionesData());
-  
+
       },
       error: (err) => {
         console.log(err);
@@ -41,7 +41,8 @@ export class CancionesComponent {
 
 
   }
-}
- 
 
- 
+}
+
+
+

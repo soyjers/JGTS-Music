@@ -132,3 +132,190 @@ transform: translateY(-12px);
   font-size: 15px;
   transform: translateY(-8px);
 }
+
+
+@media (max-width: 768px) {
+  .fondo {
+    background-color: #121212;
+    border-radius: 10px 10px 0px 0px;
+    width: 400px;
+  }
+
+  .LineaSeparacion {
+    height: 60px;
+    color: #121212;
+  }
+
+  img {
+    border-radius: 5px;
+  }
+
+  .textp {
+    color: #fff;
+  }
+
+  .txtArtista {
+    color: #999999;
+  }
+
+  .caja {
+    background-color: #232323;
+    width: 210px;
+    margin-top: 50px;
+  }
+
+  .carad {
+    width: 254px;
+    height: 254px;
+    transition: all .3s;
+  }
+
+  .carad2 {
+    width: 200px;
+    height: 230px;
+    background-color: #232323;
+    border-radius: 5px;
+    transition: all .2s;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 1px #ffffff4d;
+  }
+
+  .card:hover {
+    box-shadow: 0px 0px 30px 1px #ffffff4d;
+  }
+
+  .AlbumesDestacados {
+    margin-top: 40px;
+  }
+
+  .textAlbum{
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  transform: translateY(-12px);
+  }
+
+  .txtArtistaAlbum{
+    font-size: 13px;
+    color: #999999;
+    transform: translateY(-20px);
+  }
+
+  .cajaSliderAlbunes {
+    width: 90vw;
+    overflow: auto;
+  }
+
+
+  .cajaSliderAlbunes::-webkit-scrollbar {
+    width: 8px;
+    /* Tamaño del scroll en vertical */
+    height: 8px;
+    /* Tamaño del scroll en horizontal */
+  }
+
+  .cajaSliderAlbunes::-webkit-scrollbar-thumb {
+    background: #232323;
+    border-radius: 4px;
+  }
+
+  /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+  .cajaSliderAlbunes::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Cambiamos el fondo cuando esté en active */
+  .cajaSliderAlbunes::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+
+
+  .cajaSliderAlbunes .col {
+    margin: 0 50px;
+  }
+
+  .cajaArtistas {
+    background-color: #232323;
+    width: 230px;
+    height: 250;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .circuloArtista {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: none;
+  }
+
+  .textCantante{
+    color: #fff;
+    margin-top: 15px;
+  }
+
+  .txtArtistaFinal{
+    color: #999999;
+    font-size: 15px;
+    transform: translateY(-8px);
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .fondo {
+    background-color: #121212;
+    border-radius: 10px 10px 0px 0px;
+    width: 5000px;
+    display: none;
+  }
+
+  .caja {
+    background-color: #232323;
+    width: 210px;
+    margin-top: 50px;
+  }
+
+}
+
+
+
+
+
+
+@media (min-width: 1100px) {
+  .fondo {
+    background-color: #121212;
+    border-radius: 10px 10px 0px 0px;
+    width: 1000px;
+    display: none;
+  }
+
+  .caja {
+    background-color: #232323;
+    width: 210px;
+    margin-top: 50px;
+  }
+
+
+}
+
+
+
+
+@media (min-width: 1600px) {
+
+
+}

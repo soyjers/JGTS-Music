@@ -1,15 +1,16 @@
 const express = require('express')
 const router = express.Router()
 
-const songController = require('../controllers/songController')
-const favoriteController = require('../controllers/favoriteController')
-const userController = require('../controllers/userController')
-const artistController = require('../controllers/artistController')
-const albumController = require('../controllers/albumController')
-const sessionController = require('../controllers/sessionController')
+
+const songController = require('./controllers/songController')
+const favoriteController = require('./controllers/favoriteController')
+const userController = require('./controllers/userController')
+const artistController = require('./controllers/artistController')
+const albumController = require('./controllers/albumController')
+const sessionController = require('./controllers/sessionController')
 
 
-const mdJWT = require('../middleware/Jwt')
+const mdJWT = require('./middleware/Jwt')
 
 //? rutas de canciones
 router.post('/create-song', songController.createSong);
@@ -47,7 +48,7 @@ router.get('/find-favorite/:favoriteId', favoriteController.findfavorite);
 router.put('/update-favorite/:favoriteId', favoriteController.updatefavorite);
 router.delete('/delete-favorite/:favoriteId', favoriteController.deleteFavorite);
 
-
+router.post('/add-to-favorites/:userId/:songId',songController.aggAfavorite)
 
 
 module.exports = router

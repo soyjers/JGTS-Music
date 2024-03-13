@@ -1,7 +1,7 @@
 .alturaNav {
   margin-top: 10px;
   height: 60px;
-  margin-right: 30px;
+  margin-right: 377px;
 }
 
 .colorback {
@@ -150,4 +150,115 @@
 
 .menu {
   margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .alturaNav {
+    margin-top: 8px;
+    height: 80px;
+    margin-right: 45px;
+
+  }
+
+
+  .input {
+    width: 200px;
+
+  }
+
+
+  .input:focus {
+    opacity:1;
+    width: 350px;
+
+  }
+
+
+.estilomenu{
+  height: 30px;
+  margin-left: 55px;
+
+}
+.paste-button {
+  position:sticky;
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .alturaNav {
+    margin-top: 8px;
+    height: 110px;
+    margin-right: 45px;
+
+  }
+
+
+  .input {
+    width: 400px;
+
+  }
+
+
+  .input:focus {
+    opacity:1;
+    width: 350px;
+
+  }
+
+
+.estilomenu{
+  height: 30px;
+  margin-left: 15px;
+  transform: translateX(-500px);
+
+}
+.paste-button {
+  position:sticky;
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+}
+
+
+@media (min-width: 1600px) {
+  .alturaNav {
+    margin-top: 8px;
+    height: 80px;
+    margin-right: 378px;
+
+  }
+
+
+  .input {
+    width: 450px;
+
+  }
+
+
+  .input:focus {
+    opacity:1;
+    width: 350px;
+
+  }
+
+
+.estilomenu{
+  height: 30px;
+  margin-left: 15px;
+  transform: translateX(-500px);
+
+}
+.paste-button {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 }

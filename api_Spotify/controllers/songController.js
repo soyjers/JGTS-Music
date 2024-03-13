@@ -169,3 +169,27 @@ exports.deleteSong = async (req, res) => {
         res.status(500).send({ error: "Something has happened, contact the administrator" });
     }
 }
+
+
+    // exports.aggAforite =  async (req, res) => {
+    //     try {
+    //         const { userId, songId } = req.params;
+    //         const user = await usermodel.findById(userId);
+    //         if (!user) {
+    //             res.status(404).json({ message: 'Usuario no encontrado' });
+    //             return
+    //         }
+    //         if (!user.favoritePlaylist.includes(songId)) {
+    //             user.favoritePlaylist.push(songId);
+    //             await user.save();
+    //             res.status(200).json({ message: 'Canción agregada a favoritos correctamente' });
+    //         } else {
+    //             res.status(400).json({ message: 'La canción ya está en la lista de favoritos' });
+    //         }
+    //     } catch (error) {
+    //         console.error('error:',error);
+    //         res.status(500).json({ message: 'Error al agregar canción a favoritos' });
+    //     }
+    // }
+
+

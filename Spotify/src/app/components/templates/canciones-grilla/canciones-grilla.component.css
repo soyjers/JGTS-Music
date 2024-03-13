@@ -85,3 +85,210 @@
     height: 200px;
     border-radius: 50%;
 }
+
+
+
+@media (max-width: 768px) {
+
+  .fondo{
+    width: 400px;
+    ;
+  }
+
+  .textp {
+   font-size: 25px;
+   text-align: left;
+  }
+
+  .carad2 {
+    width: 200px;
+  }
+
+  .cajaSliderAlbunes {
+    width: 90vh;
+    overflow: auto;
+    align-items: center;
+    gap: 190px;
+  }
+
+  .cajaArtistas {
+    width: 220px;
+    height: 220;
+    margin-left: 25px;
+  }
+
+  .circuloArtista {
+    width: 180px;
+    height: 180px;
+  }
+
+  .textCantante {
+    margin-top: 10px;
+  }
+
+  .txtArtistaFinal {
+    font-size: 12px;
+}
+}
+
+
+
+@media (min-width: 768px) {
+
+  .fondo{
+    width: 905px;
+    ;
+  }
+
+  .textp {
+   font-size: 15px;
+   text-align: left;
+  }
+
+  .carad2 {
+    width: 200px;
+  }
+
+  .caja {
+    background-color: #212121;
+    width: 120px;
+    width: 120;
+}
+
+  .cajaSliderAlbunes {
+    width: 90vh;
+    overflow: auto;
+    align-items: center;
+    gap: 150px;
+  }
+
+  .cajaArtistas {
+    width: 220px;
+    height: 220;
+    margin-left: 25px;
+  }
+
+  .circuloArtista {
+    width: 180px;
+    height: 180px;
+  }
+
+  .textCantante {
+    margin-top: 10px;
+  }
+
+  .txtArtistaFinal {
+    font-size: 12px;
+}
+}
+
+
+
+
+
+
+@media (min-width: 1190px) {
+
+  .fondo{
+    width: 1000px;
+    ;
+  }
+  .caja {
+    background-color: #212121;
+    width: 190px;
+    width: 190;
+}
+  .textp {
+   font-size: 20px;
+   text-align: left;
+  }
+
+  .carad2 {
+    width: 200px;
+  }
+
+  .cajaSliderAlbunes {
+    width: 90vh;
+    overflow: auto;
+    align-items: center;
+    gap: 110px;
+  }
+
+  .cajaArtistas {
+    width: 220px;
+    height: 220;
+    margin-left: 25px;
+  }
+
+  .circuloArtista {
+    width: 180px;
+    height: 180px;
+  }
+
+  .textCantante {
+    margin-top: 10px;
+  }
+
+  .txtArtistaFinal {
+    font-size: 12px;
+}
+}
+
+
+
+
+@media (min-width: 1600px) {
+
+  .fondo {
+    width: 1400px;
+  }
+
+
+
+
+  .caja {
+    background-color: #232323;
+    width: 220px;
+    }
+
+
+
+  .carad2 {
+    width: 200px;
+    height: 230px;
+    background-color: #232323;
+    border-radius: 5px;
+    transition: all .2s;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .cajaSliderAlbunes {
+    width: 90vw;
+    overflow: auto;
+    gap: 40px;
+  }
+
+
+
+  .cajaArtistas {
+    width: 230px;
+    height: 250;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .circuloArtista {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: none;
+  }
+
+
+
+  .txtArtistaFinal {
+    font-size: 15px;
+  }
+
+}

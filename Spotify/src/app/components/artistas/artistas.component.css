@@ -47,3 +47,209 @@ img {
     font-size: 15px;
     transform: translateY(-8px);
 }
+
+
+@media (max-width: 735px) {
+  .fondo{
+    background-color: #121212;
+    height: 2500px;
+    border-radius: 10px;
+}
+
+.todos{
+  font-size: 22px;
+}
+h1{
+    color: #fff;
+    transform: translateY(44px);
+}
+
+img {
+    border-radius: 5px;
+}
+
+.textp {
+    color: #fff;
+}
+
+.cajaArtistas {
+  background-color: #232323;
+  width: 80px;
+  height:20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 70px;
+ flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.circuloArtista {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: none;
+}
+
+
+.textCantante {
+    color: #fff;
+    margin-top: 15px;
+}
+
+.txtArtistaFinal {
+    color: #999999;
+    font-size: 15px;
+    transform: translateY(-8px);
+}
+}
+
+
+
+@media (min-width: 735px) {
+  .fondo{
+    background-color: #121212;
+    height: 1400px;
+    border-radius: 10px;
+    width: 650px;
+}
+
+
+.textp {
+    color: #fff;
+}
+
+.cajaArtistas {
+    background-color: #232323;
+    width: 80px;
+    height:20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 70px;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.circuloArtista {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+}
+
+.textCantante {
+    color: #fff;
+    margin-top: 15px;
+}
+
+.txtArtistaFinal {
+    color: #999999;
+    font-size: 15px;
+    transform: translateY(-8px);
+}
+
+}
+
+
+
+
+
+
+@media (min-width: 980px) {
+  .fondo{
+    background-color: #121212;
+    height: 1000px;
+    border-radius: 10px;
+    width: 1100px;
+}
+
+
+.textp {
+    color: #fff;
+}
+
+.cajaArtistas {
+    background-color: #232323;
+    width: 80px;
+    height:20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 70px;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.circuloArtista {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+}
+
+.textCantante {
+    color: #fff;
+    margin-top: 15px;
+}
+
+.txtArtistaFinal {
+    color: #999999;
+    font-size: 15px;
+    transform: translateY(-8px);
+}
+
+}
+
+
+
+
+@media (min-width: 1600px) {
+  .fondo{
+    background-color: #121212;
+    height: 1000px;
+    border-radius: 10px;
+    width: 1300px;
+}
+
+
+.textp {
+    color: #fff;
+}
+
+.cajaArtistas {
+    background-color: #232323;
+    width: 80px;
+    height:20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 70px;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.circuloArtista {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+}
+
+.textCantante {
+    color: #fff;
+    margin-top: 15px;
+}
+
+.txtArtistaFinal {
+    color: #999999;
+    font-size: 15px;
+    transform: translateY(-8px);
+}
+
+
+}

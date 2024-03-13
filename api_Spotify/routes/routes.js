@@ -1,12 +1,16 @@
 const express = require('express')
 const router = express.Router()
 
-
 const songController = require('../controllers/songController');
+const favoriteController = require('../controllers/favoriteController');
 const userController = require('../controllers/userController');
 const artistController = require('../controllers/artistController');
 const albumController = require('../controllers/albumController');
+const sessionController = require('../controllers/sessionController');
 const uploadControllerSong = require('../middleware/mdl.uploadSong');
+const mdJWT = require('../middleware/Jwt');
+
+
 
 //? rutas de canciones
 router.post('/create-song', uploadControllerSong.fields([{ name: 'file', maxCount: 1 }, { name: 'image', maxCount: 1 }]),
@@ -40,10 +44,11 @@ router.get('/find-users', userController.getUsers);
 router.get('/find-user/:userId', userController.getUser);
 router.put('/update-user/:userId', userController.updateUser);
 router.delete('/delete-user/:userId', userController.deleteUser);
+router.post('/ingreso', sessionController.genereToken);
 
 //? rutas favoritos
 
-
+// router.post('/:userId/add-to-favorites/:songId',songController.aggAforite);
 
 
 // ? ruta de subir archivos

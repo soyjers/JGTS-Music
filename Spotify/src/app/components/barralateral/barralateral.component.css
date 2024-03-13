@@ -4,14 +4,11 @@
   background-color: #121212;
   border-radius: 15px;
   margin-left: 30px;
-
 }
 
 .textoCaja {
   font-weight: 900;
   color: #fff;
-
-
 }
 
 .tama {
@@ -24,7 +21,6 @@
   background-color: #121212;
   border-radius: 15px;
   margin-left: 30px;
-
 }
 
 .caja3 {
@@ -33,7 +29,6 @@
   background-color: #121212;
   border-radius: 15px;
   margin-left: 30px;
-
 }
 
 .colortexto {
@@ -42,11 +37,7 @@
 
 .cajaFoto {
   width: 340px;
-
 }
-
-
-
 
 .btn {
   position: relative;
@@ -108,4 +99,289 @@
 
 .playlist {
   font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .caja {
+    width: 80px;
+    height: 90px;
+    background-color: #121212;
+    border-radius: 15px;
+    margin-left: 15px;
+  }
+
+  .textoCaja {
+    font-weight: 200px;
+    color: #fff;
+    display: flex;
+    font-size: 0px;
+  }
+
+  .tama {
+    height: 24px;
+  }
+
+
+
+  .caja2 {
+    width: 80px;
+    height: 200px;
+    background-color: #121212;
+    border-radius: 15px;
+    transform: translateY(-70px);
+    margin-left:15px;
+  }
+
+  .caja3 {
+    width: 80px;
+    height: 115px;
+    background-color: #121212;
+    border-radius: 15px;
+    margin-left: 15px;
+transform: translateY(-70px);
+  }
+
+  .colortexto {
+    color: #d3c4c4;
+  }
+
+  .cajaFoto {
+    width: 75px;
+  }
+
+  .btn {
+    font-size: 19px;
+    display: inline-block;
+    font-weight: 500;
+    width: 80px;
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  .alturaNavLateral {
+    height: 10px;
+  }
+
+  .favoritos {
+    background-color: #121212;
+    border: none;
+    width: 100%;
+  }
+
+  .playlist {
+    font-size:15px;
+    display: none;
+}
+
+.favoritostext{
+  display: none;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .caja {
+    width: 180px;
+    height: 120px;
+    background-color: #121212;
+    border-radius: 15px;
+    margin-left: 15px;
+  }
+
+  .textoCaja {
+    font-weight: 200px;
+    color: #fff;
+    display: flex;
+    font-size: 16px;
+  }
+
+  .tama {
+    height: 24px;
+  }
+
+  .caja2 {
+    width: 180px;
+    height: 220px;
+    background-color: #121212;
+    border-radius: 15px;
+    transform: translateY(-70px);
+    margin-left: 15px;
+
+  }
+
+  .caja3 {
+    width: 180px;
+    height: 70px;
+    background-color: #121212;
+    border-radius: 15px;
+    margin-left: 15px;
+transform: translateY(-70px);
+
+  }
+
+  .colortexto {
+    color: #d3c4c4;
+  }
+
+  .cajaFoto {
+    width: 150px;
+  }
+  .btn {
+    font-size: 15px;
+    display: inline-block;
+    font-weight: 500;
+    width: 160px;
+    height: 30px;
+    margin-left: 5px;
+
+  }
+
+  .alturaNavLateral {
+    height: 10px;
+  }
+
+  .favoritos {
+    background-color: #121212;
+    border: none;
+    width: 100%;
+  }
+
+  .playlist {
+    font-size:15px;
+}
+.favoritostext{
+  font-size: 16px;
+}
+}
+
+
+
+
+
+
+@media (min-width: 1600px) {
+  .caja {
+    width: 350px;
+    height: 166px;
+    background-color: #121212;
+    border-radius: 15px;
+    margin-left: 30px;
+  }
+
+  .textoCaja {
+    font-weight: 900;
+    color: #fff;
+  }
+
+  .tama {
+    height: 24px;
+  }
+
+  .caja2 {
+    width: 350px;
+    height: 300px;
+    background-color: #121212;
+    border-radius: 15px;
+    margin-left: 30px;
+  }
+
+  .caja3 {
+    width: 350px;
+    height: 1000px;
+    background-color: #121212;
+    border-radius: 15px;
+    margin-left: 30px;
+  }
+
+  .colortexto {
+    color: #d3c4c4;
+  }
+
+  .cajaFoto {
+    width: 340px;
+  }
+
+  .btn {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: rgb(0, 134, 0);
+    background-color: #03690b;
+    width: 300px;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(18, 65, 0);
+  }
+
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgb(2, 68, 0);
+  }
+
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+
+  .btn::after {
+    background-color: #0a2e01;
+  }
+
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  .alturaNavLateral {
+    height: 10px;
+  }
+
+  .favoritos {
+    background-color: #121212;
+    border: none;
+    width: 100%;
+  }
+
+  .playlist {
+    font-size: 15px;
+  }
 }
