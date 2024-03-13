@@ -11,7 +11,13 @@
           <button class="btn btn-outline-success colorLetra colorSearchB" type="submit">Search</button>
         </form> -->
         <div class="container-input" >
-          <input type="text"    placeholder="Busca Canciones, Albumes, Artistas" name="text" class="input">
+          <input type="text" [formControl]="busqueda"  placeholder="Busca Canciones, Albumes, Artistas" name="text" class="input">
+
+          <ul>
+            <li *ngFor="let cancion of cancionesFiltradas">
+              {{ cancion }}
+            </li>
+          </ul>
 
           <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
             <path
