@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ZoomArtistaComponent } from './zoom-artista.component';
+import { ArtistasZoomComponent } from './zoom-artista.component';
 
-describe('ZoomArtistaComponent', () => {
-  let component: ZoomArtistaComponent;
-  let fixture: ComponentFixture<ZoomArtistaComponent>;
+describe('ArtistasZoomComponent', () => {
+  let component: ArtistasZoomComponent;
+  let fixture: ComponentFixture<ArtistasZoomComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ZoomArtistaComponent]
+      imports: [ArtistasZoomComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(ZoomArtistaComponent);
+
+    fixture = TestBed.createComponent(ArtistasZoomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

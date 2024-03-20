@@ -13,4 +13,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './artistas-zoom.component.css'
 })
 export class ArtistasZoomComponent {
+
 }

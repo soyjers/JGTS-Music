@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, Input,NgModule } from '@angular/core';
 import {  JgtsAPIService } from "../../service/jgts-api.service";
 import Swal from 'sweetalert2'
-import { MatDialog } from '@angular/material/dialog';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -18,7 +17,7 @@ export class CancionesGrillaComponent {
   @Input() cantante!: string | number
   @Input() album!: string
 
-  constructor(public dialog: MatDialog, private musicService: JgtsAPIService) { }
+  constructor( private musicService: JgtsAPIService) { }
 
 }
 

@@ -3,7 +3,7 @@
         <h1 class="fw-bold todos">Todos los Artistas del  Momento</h1>
     </div>
 
-    <div class="row row-cols-1  row-cols-lg-2 row-cols-xl-3 row-cols-xxl-4 mt-1">
+    <div class="row row-cols-1  row-cols-lg-2 row-cols-xl-3 row-cols-xxl-4 mt-1" routerLink="/zoomArtista">
 
       @for (artistaData of artistasData(); track artistaData.artistaId) {
         <app-artistas-grilla [imagenArtista]="artistaData.image"

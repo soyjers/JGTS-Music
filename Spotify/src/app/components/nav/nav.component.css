@@ -1,6 +1,7 @@
 .alturaNav {
   margin-top: 10px;
   height: 60px;
+  width: 1400px;
   margin-right: 377px;
 }
 
@@ -150,6 +151,8 @@
 
 .menu {
   margin-right: 50px;
+  transform: translateX(1200px);
+  margin-top: -45px;
 }
 
 @media (max-width: 768px) {
@@ -174,9 +177,9 @@
   }
 
 
-.estilomenu{
+.menu{
   height: 30px;
-  margin-left: 55px;
+  margin-left:9px;
 
 }
 .paste-button {
@@ -239,7 +242,7 @@
 
 
   .input {
-    width: 450px;
+    width: 850px;
 
   }
 
