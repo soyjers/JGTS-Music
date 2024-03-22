@@ -1,8 +1,8 @@
 <li>
     <button class="btn col-12 d-flex">
 
-        <div class="d-flex justify-content-start mt-3 col-2 ms-3">
-            <label>
+        <div class="d-flex justify-content-between mt-3 col-2 ms-3">
+            <label class="container favorite">
                 <input type="checkbox">
                 <svg id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -11,10 +11,14 @@
                     </path>
                 </svg>
             </label>
+            <div class="btnPlay" (click)="toggleAudio(archivoAudio)">
+                <button class="btn btnRep2 me-3"><i class="fa-solid fa-play"
+                        style="color: #000000;"></i></button>
+            </div>
         </div>
 
         <div class="col-9 d-flex mt-1">
-            <img class="imagenCancion" [src]="'http://localhost:4001/'+imagenCancion" alt="" width="50px" height="50px">
+            <img class="imagenCancion" [src]="'http://localhost:4001/'+imagenCancion" alt="" width="5px" height="5px">
             <div class="textoTitulo d-flex flex-column align-items-start justify-content-center ms-3">
                 <h5 class="textCancion mt-1">{{nombreCancion}}</h5>
                 <h5 class="textArtista">{{cantante}}</h5>

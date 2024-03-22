@@ -16,7 +16,16 @@ const storage = multer.diskStorage({
     },
 
     filename: function (req, file, cb) {
-        cb(null, `${Date.now()}_${file.originalname}`);
+
+        let cadenaOriginal = file.originalname;
+
+        // Quitar caracteres con tilde
+        let cadenaSinTilde = cadenaOriginal.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        
+        // Reemplazar espacios en blanco por guion bajo
+        let cadenaFinal = cadenaSinTilde.replace(/\s+/g, "_");
+
+        cb(null, `${Date.now()}_${cadenaFinal}`);
     }
 });
 

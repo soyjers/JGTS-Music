@@ -20,9 +20,9 @@ export class AlbumesZoomComponent {
   nombreAlbum!: string
   imgAlbum!: string
   cantante!: string
-  albumesData:any
+  albumesData: any
   servicioAPI = inject(JgtsAPIService)
-  cancionesData = signal<any>([])
+  cancionesData:any = []
 
   constructor(private paramsRuta: ActivatedRoute) {
 
@@ -40,19 +40,38 @@ export class AlbumesZoomComponent {
 
         this.nombreAlbum = album.albumId
         this.imgAlbum = album.image
-        this.cantante = album.artistId
+
+
+        this.servicioAPI.getArtista(album.artistId).subscribe({
+          next: (dataArtista: any) => {
+            
+            this.cantante = dataArtista.artistId
+            console.log(dataArtista.artistId);
+            
+
+
+            this.servicioAPI.getCancionPorAlbum(this.idAlbumUrl).subscribe({
+              next: (canciones) => {
+                console.log("********************");
+                console.log(canciones);
+                console.log("********************");
+                this.cancionesData = canciones
+
+              },
+              error: (err) => {
+                console.log(err);
+              }
+            })
 
 
 
-        this.servicioAPI.getCancionPorAlbum(this.idAlbumUrl).subscribe({
-          next: (canciones) => {
-            console.log(canciones);
-
-          },
-          error: (err) => {
-            console.log(err);
+          }, error: (error) => {
+            console.log(error)
           }
         })
+
+
+
       },
       error: (err) => {
         console.log(err);
@@ -64,6 +83,5 @@ export class AlbumesZoomComponent {
 
 
   }
-
 
 }

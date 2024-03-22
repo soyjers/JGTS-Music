@@ -30,13 +30,13 @@ export const routes: Routes = [
     { path: "canciones", component: CancionesComponent },
     { path: "albumes", component: AlbumesComponent },
     { path: "Artistas", component: ArtistasComponent},
-    { path: "ZoomArtistas", component: ArtistasZoomComponent},
+    { path: "zoomArtista", component: ArtistasZoomComponent},
     { path: "zoom/:idAlbum", component: AlbumesZoomComponent },
     { path: 'principal', component: PrincipalComponent },
     { path: "AdminAddContent", canMatch: [autenticacionGuard], component: AgregarCancionComponent },
     { path: "MisFavoritos", component: MisFavoritosComponent },
     { path: "404", component: error404Component },
-    { path: '**', redirectTo: '404', pathMatch: 'full' } ,
+    // { path: '**', redirectTo: '404', pathMatch: 'full' } ,
     // { path: '**', redirectTo: 'registrarse', pathMatch: 'full' } ,
 
 

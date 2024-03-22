@@ -1,18 +1,17 @@
-import { CommonModule } from '@angular/common'; 
-import { Component,Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-zoom-artista',
+  selector: 'app-artistas-zoom',
   standalone: true,
-  imports: 
-  [
-    CommonModule
+  imports: [
+    CommonModule,
+    RouterLink
   ],
   templateUrl: './zoom-artista.component.html',
   styleUrl: './zoom-artista.component.css'
 })
-export class ZoomArtistaComponent {
-  @Input() imagenCancion!: string
-  @Input() cantante!: string | number
-  @Input() nombreCancion!: string
+export class ArtistasZoomComponent {
+
 }

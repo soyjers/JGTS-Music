@@ -4,6 +4,7 @@ import { Router, RouterLink } from '@angular/router';
 import { MusicaGrillaComponent } from '../templates/musica-grilla/musica-grilla.component';
 import { AlbumesGrillaPrincipalComponent } from '../templates/albumes-grilla-principal/albumes-grilla-principal.component';
 import { JgtsAPIService } from '../../../app/components/service/jgts-api.service'
+import { ArtistasGrillaPrincipalComponent } from '../templates/artistas-grilla-principal/artistas-grilla-principal.component';
 @Component({
   selector: 'app-principal',
   standalone: true,
@@ -11,7 +12,8 @@ import { JgtsAPIService } from '../../../app/components/service/jgts-api.service
     CommonModule,
     RouterLink,
     MusicaGrillaComponent,
-    AlbumesGrillaPrincipalComponent
+    AlbumesGrillaPrincipalComponent,
+    ArtistasGrillaPrincipalComponent
   ],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
@@ -25,6 +27,8 @@ export class PrincipalComponent {
 
   albumesData = signal<any>([])
   private albumesService = inject(JgtsAPIService)
+  artistasData = signal<any>([])
+  private artistaService = inject(JgtsAPIService)
 
 
 
@@ -60,6 +64,20 @@ export class PrincipalComponent {
         console.log(err);
       }
     })
+
+
+    
+    this.artistaService.getArtistas().subscribe({
+      next: (artistas) => {
+        this.artistasData.set(artistas)
+        console.log(this.artistasData());
+
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+    
 
 
 

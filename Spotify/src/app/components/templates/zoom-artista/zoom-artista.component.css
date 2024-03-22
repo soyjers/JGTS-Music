@@ -173,17 +173,17 @@ li {
     perspective: 1000px;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
+
   .card svg {
     width: 48px;
     fill: #333;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
+
   .card:hover {
     transform: scale(1.05);
   }
-  
+
   .card__content {
     position: absolute;
     top: 0;
@@ -197,22 +197,22 @@ li {
     transform-origin: bottom;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
+
   .card:hover .card__content {
     transform: rotateX(0deg);
   }
-  
+
   .card__title {
     margin: 0;
     font-size: 24px;
     color: #ffffff;
     font-weight: 700;
   }
-  
+
   .card:hover svg {
     scale: 0;
   }
-  
+
   .card__description {
     margin: 10px 0 0;
     font-size: 14px;
@@ -225,4 +225,3 @@ li {
     height: 200px;
     width: 200px;
   }
-  

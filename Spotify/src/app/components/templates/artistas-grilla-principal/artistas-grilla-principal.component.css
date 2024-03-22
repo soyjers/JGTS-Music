@@ -1,0 +1,49 @@
+.fondo{
+    background-color: #121212;
+    width: 1389px;
+    height: 1400px;
+    border-radius: 10px;
+}
+h1{
+    color: #fff;
+    transform: translateY(44px);
+}
+
+img {
+    border-radius: 5px;
+}
+
+.textp {
+    color: #fff;
+}
+
+.cajaArtistas {
+    background-color: #232323;
+    width: 230px;
+    height: 250;
+    margin-left: 75px;
+    margin-right: 40px;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.circuloArtista {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: none;
+}
+
+.textCantante {
+    color: #fff;
+    margin-top: 15px;
+}
+
+.txtArtistaFinal {
+    color: #999999;
+    font-size: 15px;
+    transform: translateY(-8px);
+}

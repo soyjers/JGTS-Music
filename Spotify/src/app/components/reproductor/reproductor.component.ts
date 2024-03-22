@@ -1,8 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule
+
+} from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2'
-import {  JgtsAPIService } from "../service/jgts-api.service";
+import { JgtsAPIService } from "../service/jgts-api.service";
 
 @Component({
   selector: 'app-reproductor',
@@ -12,11 +14,11 @@ import {  JgtsAPIService } from "../service/jgts-api.service";
     RouterLink,
   ],
   templateUrl: './reproductor.component.html',
-    styleUrl: './reproductor.component.css'
+  styleUrl: './reproductor.component.css'
 })
 export class ReproductorComponent {
-
-
+  private audio!: HTMLAudioElement;
+  song: any;
   iconPlay: string = "assets/img/reproductor/play.svg"
   imgCancion: string = "assets/img/reproductor/IconDisc.png"
   artista: string = "Sin Definir"
@@ -25,18 +27,30 @@ export class ReproductorComponent {
     { src: "assets/songs/eternity-extended-mix.mp3", img: "assets/img/songs/anyma.jpg", nombre: "Eternity", artista: "Anyma" }
   ]
 
-  audioCancion() {
-    let audio = new Audio(this.dataSongs[0].src)
-    audio.play()
-    this.iconPlay = "assets/img/reproductor/pause.svg"
+  constructor(private favoritePlaylistService: JgtsAPIService) {
+    this.audio = new Audio();
+  }
+
+
+  audioCancion(url: string = this.dataSongs[0].src): void {
+    console.log(this.audio.paused);
+
+    if (this.audio.paused) {
+      this.audio.src = url;
+      this.audio.play();
+      this.iconPlay = "assets/img/reproductor/pause.svg"
+    } else {
+      this.iconPlay= "assets/img/reproductor/play.svg"
+      this.audio.pause();
+    }
+
+
     this.imgCancion = this.dataSongs[0].img
     this.artista = this.dataSongs[0].artista
     this.nombreCancion = this.dataSongs[0].nombre
   }
 
-
-  constructor(private favoritePlaylistService: JgtsAPIService) {}
-  song: any; // Suponiendo que aquí tienes la canción que se muestra en el componente
+ // Suponiendo que aquí tienes la canción que se muestra en el componente
 
   toggleFavorite(song: any): void {
     if (song.isFavorite) {

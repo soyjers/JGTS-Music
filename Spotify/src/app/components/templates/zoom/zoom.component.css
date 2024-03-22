@@ -127,6 +127,22 @@ img.imagenCancion:hover {
     height: 90px;
 }
 
+.btnRep2{
+    width: 35px;
+    height: 35px;
+    background: #ffffff;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transform: translateY(-5px);
+}
+
+.btnRep2:hover {
+    background-color: #aaa;
+}
+
+.favorite{
+    transform: translateX(-70px);
+}
 
 
 

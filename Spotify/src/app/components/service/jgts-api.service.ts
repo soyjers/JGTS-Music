@@ -20,8 +20,8 @@ export class JgtsAPIService {
         return this.http.get(`${this.urlApi}/find-artists`, { headers })
     }
 
-    getArtista(idArtista: string | null) {
-        return this.http.get(`${this.urlApi}/find-artists ${idArtista}`)
+    getArtista(idArtista: string|null) {
+        return this.http.get(`${this.urlApi}/find-artist/${idArtista}`)
     }
 
     postArtista(dataArtista: any) {

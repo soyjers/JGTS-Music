@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AgregarContenidoComponent } from './agregar-cancion.component';
+import { AgregarCancionComponent } from './agregar-cancion.component';
 
-describe('AgregarContenidoComponent', () => {
-  let component: AgregarContenidoComponent;
-  let fixture: ComponentFixture<AgregarContenidoComponent>;
+describe('AgregarCancionComponent', () => {
+  let component: AgregarCancionComponent;
+  let fixture: ComponentFixture<AgregarCancionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AgregarContenidoComponent]
+      imports: [AgregarCancionComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AgregarContenidoComponent);
+    fixture = TestBed.createComponent(AgregarCancionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

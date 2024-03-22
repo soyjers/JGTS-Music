@@ -76,11 +76,17 @@ export class AgregarCancionComponent {
       default:
         if (event.target.files.length > 0) {
           const fileSong = event.target.files[0];
+          let cadenaOriginal = fileSong.name;
+          let cadenaSinTilde = cadenaOriginal.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+          let cadenaFinal = cadenaSinTilde.replace(/\s+/g, "_");
+          // Crear un nuevo objeto File con el nuevo nombre
+          const nuevoFileSong = new File([fileSong], cadenaFinal, { type: fileSong.type });
           if (this.formSong) {
-            this.formSong.get("file")!.setValue(fileSong);
+            this.formSong.get("file")!.setValue(nuevoFileSong);
           }
           break;
         }
+        
 
     }
 
